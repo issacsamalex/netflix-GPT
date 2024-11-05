@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+## Netflix-GPT 🎦 with React, Firebase & GPT-powered Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Netflix clone built with React.js, Firebase, and GPT API for movie search functionality. The main aim was to explore the fundamentals of React, understand the website-building process, and develop a fully responsive web app. The app is deployed on Vercel, allowing users to browse and search for movies, sign up and log in, all within a Netflix-inspired interface.
 
-## Available Scripts
+## 💻 Demo
 
-In the project directory, you can run:
+https://netflix-gpt-delta-pied.vercel.app/
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication**: Leveraged Firebase services to enable secure login and signup functionalities.
+- **GPT-Powered Movie Search**: Integrated GPT API to enhance movie search capabilities, making it easier for users to find specific titles or genres.
+- **Responsive Design**: Ensured the app is responsive and accessible across various devices (desktops, tablets, and smartphones).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 👩‍💻 Tech Stack
 
-### `npm test`
+**Client:** React, Firebase, HTML5, CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  git clone https://github.com/issacsamalex/netflix-GPT
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Go to the project directory**
 
-### `npm run eject`
+```bash
+  cd netflix-GPT
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install dependencies**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Set up Firebase**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Create a Firebase project at Firebase Console.
+- Enable authentication (email/password).
+- Add your Firebase configuration to the project.(src/utils/firebase.js)
 
-## Learn More
+5. **Set up GPT API**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Sign up for OpenAI API access at OpenAI's API.
+- Add your GPT API key to the .env file:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  REACT_APP_GPT_API_KEY = your_gpt_api_key
+```
 
-### Code Splitting
+6. **Run the application**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm start
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app will start at http://localhost:3000.
