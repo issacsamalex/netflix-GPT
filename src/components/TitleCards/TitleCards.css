@@ -1,0 +1,125 @@
+.title-cards {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  padding: 10px 0;
+}
+
+.title-cards h2 {
+  margin-bottom: 8px;
+}
+
+.card-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-FaChevronRight {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #dc2626;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.slider-FaChevronLeft {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #dc2626;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card-list:hover .slider-FaChevronLeft,
+.card-list:hover .slider-FaChevronRight {
+  opacity: 100;
+}
+
+.card-movie {
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.card-movie-img {
+  width: 240px;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.card-movie-img {
+  transition: transform 300ms ease-in-out;
+}
+
+.card-movie:hover .card-movie-img {
+  transform: scale(1.25, 1.25);
+}
+
+.card-list .card p {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 800px) {
+  .title-cards {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .title-cards h2 {
+    font-size: 20px;
+  }
+  .card-list img {
+    width: 200px;
+  }
+  .card-list p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-cards h2 {
+    font-size: 15px;
+  }
+  .card-list img {
+    width: 165px;
+  }
+  .card-list p {
+    font-size: 10px;
+  }
+}
