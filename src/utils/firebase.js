@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD6oTPvrY2OpicKGzY7Z2sKS5s9lwImtmo",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "netflixgpt-d7aa3.firebaseapp.com",
   projectId: "netflixgpt-d7aa3",
   storageBucket: "netflixgpt-d7aa3.appspot.com",
