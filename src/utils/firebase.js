@@ -35,15 +35,16 @@ const signup = async (name, email, password) => {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
     await updateProfile(user, { displayName: name });
-    await addDoc(collection(db, "user"), {
-      uid: user.uid,
-      displayName: name,
-      authProvider: "local",
-      email,
-    });
-    toast.success(`Welcome, ${user.displayName}`);
+    // await addDoc(collection(db, "user"), {
+    //   uid: user.uid,
+    //   displayName: name,
+    //   authProvider: "local",
+    //   email,
+    // });
+    toast.success(`Welcome${user.displayName ? `, ${user.displayName}` : ""}`);
   } catch (error) {
-    toast.error(error.code.split("/")[1].split("-").join(" "));
+    // toast.error(error.code.split("/")[1].split("-").join(" "));
+    toast.error(error.code);
   }
 };
 

@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import netflix_logo from "../../assets/logo.png";
 import "./Signup.css";
-import { checkValidData } from "../../utils/validate";
 import { signup } from "../../utils/firebase";
 import netflix_spinner from "../../assets/netflix_spinner.gif";
+import { checkValidSignup } from "../../utils/validateSignup";
 
 const Signup = () => {
   const [errMsg, setErrMsg] = useState(null);
@@ -12,7 +12,6 @@ const Signup = () => {
 
   const { searchParams } = new URL(document.location);
   const emailValue = searchParams.get("email");
-  console.log(emailValue);
 
   const name = useRef("raju");
   const email = useRef(emailValue || "");
@@ -21,7 +20,10 @@ const Signup = () => {
   const handleButtonClick = async (event) => {
     // validate the form data
     event.preventDefault();
-    const message = checkValidData(email.current.value, password.current.value);
+    const message = checkValidSignup(
+      email.current.value,
+      password.current.value
+    );
     setErrMsg(message);
     if (message) return;
 
