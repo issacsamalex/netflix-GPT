@@ -4,7 +4,7 @@ This project is a Netflix clone built with React.js, Firebase, and GPT API for m
 
 ## 💻 Demo
 
-https://netflix-gpt-delta-pied.vercel.app/
+https://netflix-gpt-ten-flame.vercel.app/
 
 ## ✨ Features
 
